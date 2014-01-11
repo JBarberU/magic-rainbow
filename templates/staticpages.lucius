@@ -1,0 +1,4 @@
+textarea{
+  width: 60em;
+  height: 15em;
+}

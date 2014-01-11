@@ -1,0 +1,25 @@
+<h1>#{entryTitle entry}
+<p>
+  #{entryContent entry}
+
+
+<h2>_{MsgCommentsHeading}
+<ul>
+        $if null comments
+            <p>_{MsgNoComments}
+        $else
+            $forall Entity _ comment <- comments
+                <li id="comment">
+                  #{commentContent comment}
+       
+
+<h2>_{MsgAddCommentHeading}
+<ul>
+        $maybe _ <- muser
+            <form method=post enctype=#{enctype}>
+                ^{commentFormWidget}
+                <div>
+                    <input type=submit value=_{MsgAddCommentButton}>
+        $nothing
+            <p>
+                <a href=@{AuthR LoginR}>_{MsgLoginToComment}

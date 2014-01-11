@@ -1,0 +1,4 @@
+<h1>#{staticPageName sPage}
+
+<p>
+  #{staticPageContent sPage}

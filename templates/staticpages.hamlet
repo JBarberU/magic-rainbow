@@ -1,0 +1,12 @@
+<h1>Edit static pages
+
+<form method=post enctype=#{enctype}>
+  <table>
+    ^{formWidget}
+    <tr>
+      <td colspan="2">
+        <input type=submit value=_{MsgSubmitPage}>
+
+$forall Entity staticPageId sPage <- sPages 
+  <li>
+    <a href=@{StaticPageR staticPageId}>#{staticPageName sPage}

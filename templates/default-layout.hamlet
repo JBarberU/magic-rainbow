@@ -1,0 +1,41 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar">
+        <span class="icon-bar">
+        <span class="icon-bar">
+      <a class="brand" href=@{HomeR}>_{MsgPageName}
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li>
+            <a href=@{HomeR}>Home
+          <li>
+            <a href=@{EntriesR}>_{MsgEntries}
+          $maybe mu <- muser
+            <li>
+              <a href=@{WriteEntryR}>_{MsgWriteAnEntry}
+            <li>
+              <a href=@{StaticPagesR}>_{MsgEditStaticPages}
+          $forall Entity staticPageId sPage <- sPages 
+            <li>
+              <a href=@{StaticPageR staticPageId}>#{staticPageName sPage}
+
+<div class="wrap">
+  <div class="login">
+    $maybe mu <- muser
+      <a href=@{AuthR LogoutR}>
+        _{MsgLogout}
+    $nothing
+      <a href=@{AuthR LoginR}>
+        _{MsgLogin}
+  <div class="container">
+    $maybe msg <- mmsg
+      <div class="alert alert-info">
+        <strong>_{MsgInfoAlert}
+        #{msg}
+    ^{widget}
+    <div id="push">
+
+<!-- Reactivate the footer later -->
+<!-- #{extraCopyright $ appExtra $ settings master} -->

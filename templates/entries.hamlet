@@ -1,0 +1,6 @@
+<h1>_{MsgEntries}
+<p>
+  <ul>
+    $forall Entity entryid entry <- entries
+      <li><a href=@{EntryR entryid}>#{entryTitle entry}</a>
+      

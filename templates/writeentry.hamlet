@@ -1,0 +1,9 @@
+<h1>_{MsgWriteAnEntry}
+
+<form method=post enctype=#{enctype}>
+  <table>
+    ^{formWidget}
+    <tr>
+      <td colspan="2">
+        <input type=submit value=_{MsgSubmitEntry}>
+

@@ -1,0 +1,9 @@
+li#comment{
+  background-color: #eee;
+  list-style-type: none;
+  border-color: #ddd;
+  border-width: 2px;
+  border-style: solid;
+  margin-top: 5px;
+  padding: 10px 10px 10px 10px;
+}
